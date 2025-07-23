@@ -6,114 +6,48 @@
   <title>НейроКемп</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      background: #000;
-      color: #fff;
-      text-align: center;
+      overflow: hidden;
     }
-    .banner {
-      background: url('https://ibb.co/4nbxnPMM') no-repeat center center;
-      background-size: cover;
-      height: 600px;
+
+    .container {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 1.5rem;
+      width: 100%;
+      height: 100vh;
+      background: url('https://i.ibb.co/KptHpF77/image.png') no-repeat center center;
+      background-size: cover;
     }
-    .tagline {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    .cta {
-      background: #e6ff4c;
-      color: #000;
-      padding: 0.7rem 1.5rem;
+
+    .cta-button {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #FF3377;
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 1.2rem;
       font-weight: bold;
+      border: none;
       border-radius: 6px;
       cursor: pointer;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
-    .warning {
-      background: #ff2774;
-      color: #fff;
-      padding: 0.4rem 1rem;
-      font-size: 0.9rem;
-      font-style: italic;
-      border-radius: 30px;
-      position: absolute;
-      top: 180px;
-      right: -30px;
-      transform: rotate(15deg);
-      box-shadow: 0 0 10px #0006;
+
+    .cta-button:hover {
+      background-color: #e52f6b;
     }
-    .title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      background: #000a;
-      padding: 1rem;
-      border-radius: 10px;
-      display: inline-block;
-    }
-    .desc {
-      padding: 1.5rem;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .desc b {
-      font-weight: bold;
-    }
-    .bottom {
-      display: flex;
-      justify-content: space-around;
-      background: #000;
-      padding: 1rem;
-      border-top: 1px solid #222;
-    }
-    .col {
-      font-size: 0.9rem;
-    }
-    .val {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-top: 0.4rem;
-    }
-    .blue { color: #49c6ff; }
-    .pink { color: #ff5cb4; }
-    .green { color: #9fff57; }
   </style>
 </head>
 <body>
-  <div class="banner">
-    <div>
-      <div class="tagline">Встигни долучитись зі знижкою<br />Старт – <b>30 липня</b></div>
-      <div class="cta" onclick="Telegram.WebApp.openTelegramLink('https://t.me/@anya_creo')">Залишити заявку</div>
-    </div>
-    <div class="warning">⚠️ обережно! викликає залежність від креативу</div>
-    <div class="title">НЕЙРО КЕМП</div>
-  </div>
-
-  <div class="desc">
-    <b>6 тижнів</b> занурення в нейромережі для дизайнерів, креаторів та тих, хто хоче використовувати нейромережі, щоб створювати <b style="color:#f86;">якісніше</b>, <b style="color:#f86;">швидше</b> і <b style="color:#9f9;">заробляти більше</b>
-  </div>
-
-  <div class="bottom">
-    <div class="col">
-      <div class="blue">{ старт }</div>
-      <div class="val">30.07</div>
-    </div>
-    <div class="col">
-      <div class="pink">{ + бонус }</div>
-      <div class="val">AI-Відео</div>
-    </div>
-    <div class="col">
-      <div class="green">{ Тривалість }</div>
-      <div class="val">1,5 місяці</div>
-    </div>
+  <div class="container">
+    <button class="cta-button" onclick="Telegram.WebApp.openTelegramLink('https://t.me/anya_creo')">
+      Дивитись деталі
+    </button>
   </div>
 </body>
 </html>
